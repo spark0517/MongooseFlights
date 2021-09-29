@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title></title>
+</head>
+<body>
+    <p>Please first ensure that the Performer is not in the dropdown
+    <select>
+        <% tickets.forEach(function(t) { %>
+        <option><%= t.name %></option>
+        <% }) %>
+    </select>
+    </p>
+    <form id="add-ticket-form" action="/tickets" method="POST">
+        <label>Seat:</label>
+        <input type="text" name="seat">
+        <label>Price:</label>
+        <input type="number" name="price">
+        <input type="submit" value="Add Ticket">
+    </form>
+
+    
+</body>
+</html>
