@@ -24,7 +24,7 @@ function newFlight(req, res){
 }
 
 function create(req, res){
-    req.body.date = parseInt(req.body.date);
+    req.body.date =(req.body.date);
     req.body.flightNo = parseInt(req.body.flightNo);
     req.body.departs = parseInt(req.body.departs);
     req.body.arrivals = parseInt(req.body.arrivals);
